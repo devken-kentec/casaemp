@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,9 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.casadoempreendedor.dto.ShoppingDTO;
 import br.com.casadoempreendedor.service.ShoppingService;
 
-@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/63617361646f656d707265656e6465646f72/api/shopping")
+@RequestMapping("/casaEmpGoias/api/shopping")
 public class ShoppingController {
 	
 	@Autowired
@@ -31,7 +29,6 @@ public class ShoppingController {
 	public ResponseEntity<Iterable<ShoppingDTO>> findAll(){
 		return ResponseEntity.ok(ss.findAll());
 	}
-	
 	
 	@GetMapping("/editar/{id}")
 	public ResponseEntity<Optional<ShoppingDTO>> findById(@PathVariable("id") Long id){

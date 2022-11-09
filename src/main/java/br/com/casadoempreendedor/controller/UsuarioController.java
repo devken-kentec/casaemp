@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,9 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.casadoempreendedor.dto.UsuariosDTO;
 import br.com.casadoempreendedor.service.UsuarioService;
 
-@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/63617361646f656d707265656e6465646f72/api/usuarios")
+@RequestMapping("/casaEmpGoias/api/usuarios")
 public class UsuarioController {
 	
 	@Autowired

@@ -8,7 +8,6 @@ import javax.servlet.http.Part;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,10 +22,8 @@ import br.com.casadoempreendedor.domain.Empresas;
 import br.com.casadoempreendedor.dto.EmpresasDTO;
 import br.com.casadoempreendedor.service.EmpresasService;
 
-
-@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/63617361646f656d707265656e6465646f72/api/empresas")
+@RequestMapping("/casaEmpGoias/api/empresas")
 public class EmpresaController {
 	
 		@Autowired
