@@ -2,6 +2,7 @@ package br.com.casadoempreendedor.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.casadoempreendedor.domain.Contato;
 import br.com.casadoempreendedor.service.ContatoService;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/casaEmpGoias/api/contato")
 public class ContatoController {
