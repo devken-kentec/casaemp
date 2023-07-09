@@ -13,16 +13,15 @@ import br.com.casadoempreendedor.domain.Shopping;
 public interface ShoppingRepository extends JpaRepository<Shopping, Long>{
 	
 	@Query("SELECT s FROM Shopping s WHERE s.vinculo = 'Vincular' ")
-	public List<Shopping> listarTodos();
+	List<Shopping> listarTodos();
 	
 	@Query("SELECT s FROM Shopping s "
 			+ "JOIN s.empresas e "
 			+ "WHERE s.vinculo = 'Vincular' AND e.ramoDeAtividade = :ramoDeAtividade ")
-	public List<Shopping> listarRamoAtividade(
-							@Param("ramoDeAtividade") String ramoDeAtividade);
+	List<Shopping> listarRamoAtividade(@Param("ramoDeAtividade") String ramoDeAtividade);
 	
 	@Query(nativeQuery=true, value="SELECT DISTINCT (e.ramo_atividade) FROM shopping AS s "
 			+ "JOIN empresas AS e "
 			+ "ON s.id_empresa = e.id ")
-	public List<String> listarRamoAtividadeFiltro();
+	List<String> listarRamoAtividadeFiltro();
 }
